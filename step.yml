@@ -1,0 +1,50 @@
+name: slack-notify
+version: 0.0.1
+summary: |
+  Broadcast the result of a pipeline execution to Slack.
+tags:
+  - notification
+  - webhook
+  - slack
+
+properties:
+  - name: webhook-url
+    type: string
+    required: true
+
+  - name: message-channel
+    type: string
+    required: false
+    default: wercker
+
+  - name: message-username
+    type: string
+    required: false
+    default: $WERCKER_GIT_REPOSITORY
+
+  - name: message-icon-url
+    type: string
+    required: false
+    default: https://secure.gravatar.com/avatar/a08fc43441db4c2df2cef96e0cc8c045?s=140
+
+  - name: message-on-passed
+    type: bool
+    required: false
+    default: true
+
+  - name: message-on-failed
+    type: bool
+    required: false
+    default: true
+
+  - name: message-pretext
+    type: string
+    required: false
+
+  - name: message-text-on-passed
+    type: string
+    required: false
+
+  - name: message-text-on-failed
+    type: string
+    required: false

@@ -1,0 +1,12 @@
+box: ubuntu:latest
+
+build:
+  steps:
+    - script:
+      name: remove git
+      code: rm -rf $WERCKER_ROOT/.git
+
+publish:
+  steps:
+    - internal/publish-step:
+        owner: bashaus
